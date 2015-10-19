@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
@@ -66,6 +67,7 @@ class ViewController: UIViewController {
         func actions(label: UILabel!){
             if(alarm && (doorUnlocked || doorOpen || window || movementDetect)){
                 print("siren on")
+                
                 if(doorUnlocked){
                     print("door unlocked")
                 }

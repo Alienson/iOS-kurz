@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Projekt1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sNr-WL-gph"/>
+                        <viewControllerLayoutGuide type="bottom" id="gvU-W2-J4u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sP6-nh-cR1">
+                                <rect key="frame" x="20" y="20" width="335" height="93"/>
+                                <color key="backgroundColor" red="0.80000001192092896" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTB-uD-9hN">
+                                <rect key="frame" x="20" y="202" width="85" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="fPz-Ss-djZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="he0-or-cm8">
+                                <rect key="frame" x="168" y="258" width="187" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gxd-6s-Ykg">
+                                <rect key="frame" x="20" y="260" width="85" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4fn-1u-7SF">
+                                <rect key="frame" x="168" y="202" width="187" height="30"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="sP6-nh-cR1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="5XR-vt-XrX"/>
+                            <constraint firstItem="gvU-W2-J4u" firstAttribute="top" secondItem="he0-or-cm8" secondAttribute="bottom" constant="379" id="8hq-Z6-Qxu"/>
+                            <constraint firstItem="Gxd-6s-Ykg" firstAttribute="leading" secondItem="nTB-uD-9hN" secondAttribute="leading" id="DME-nY-VLv"/>
+                            <constraint firstItem="nTB-uD-9hN" firstAttribute="top" secondItem="sP6-nh-cR1" secondAttribute="bottom" constant="89" id="JmP-No-Xnu"/>
+                            <constraint firstItem="Gxd-6s-Ykg" firstAttribute="top" secondItem="nTB-uD-9hN" secondAttribute="bottom" constant="32" id="MgZ-Ro-W5x"/>
+                            <constraint firstItem="4fn-1u-7SF" firstAttribute="trailing" secondItem="he0-or-cm8" secondAttribute="trailing" id="PaU-RU-7uF"/>
+                            <constraint firstItem="nTB-uD-9hN" firstAttribute="leading" secondItem="sP6-nh-cR1" secondAttribute="leading" id="RGx-Q4-pcY"/>
+                            <constraint firstItem="he0-or-cm8" firstAttribute="leading" secondItem="4fn-1u-7SF" secondAttribute="leading" id="SfL-wY-OlF"/>
+                            <constraint firstItem="he0-or-cm8" firstAttribute="centerY" secondItem="Gxd-6s-Ykg" secondAttribute="centerY" id="UGz-Sw-ngn"/>
+                            <constraint firstItem="gvU-W2-J4u" firstAttribute="top" secondItem="Gxd-6s-Ykg" secondAttribute="bottom" constant="381" id="ZnL-kc-k6f"/>
+                            <constraint firstItem="he0-or-cm8" firstAttribute="top" secondItem="4fn-1u-7SF" secondAttribute="bottom" constant="26" id="bik-rf-xlN"/>
+                            <constraint firstItem="4fn-1u-7SF" firstAttribute="trailing" secondItem="sP6-nh-cR1" secondAttribute="trailing" id="eGM-QP-off"/>
+                            <constraint firstItem="4fn-1u-7SF" firstAttribute="leading" secondItem="nTB-uD-9hN" secondAttribute="trailing" constant="63" id="icg-nl-Tnu"/>
+                            <constraint firstItem="sP6-nh-cR1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kAb-7h-eCV"/>
+                            <constraint firstItem="sP6-nh-cR1" firstAttribute="top" secondItem="sNr-WL-gph" secondAttribute="bottom" id="pz0-pv-dxB"/>
+                            <constraint firstItem="Gxd-6s-Ykg" firstAttribute="trailing" secondItem="nTB-uD-9hN" secondAttribute="trailing" id="s8z-e9-Ec0"/>
+                            <constraint firstItem="nTB-uD-9hN" firstAttribute="top" secondItem="4fn-1u-7SF" secondAttribute="top" id="sAe-Bn-uUH"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="242.5" y="311.5"/>
+        </scene>
+    </scenes>
+</document>

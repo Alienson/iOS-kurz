@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="THw-DC-LdO">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Signup View Controller-->
+        <scene sceneID="tr4-r2-11s">
+            <objects>
+                <viewController id="THw-DC-LdO" customClass="SignupViewController" customModule="cvicenie3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PHb-lL-a1i"/>
+                        <viewControllerLayoutGuide type="bottom" id="mkp-Bk-Tgp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tuh-ok-qi5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fam-YC-zUZ">
+                                <rect key="frame" x="20" y="211" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="THw-DC-LdO" id="rpu-R3-d2l"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gI-89-l8U">
+                                <rect key="frame" x="136" y="269" width="48" height="30"/>
+                                <state key="normal" title="Signup"/>
+                                <connections>
+                                    <action selector="btnSignup:" destination="THw-DC-LdO" eventType="touchUpInside" id="UfG-Ym-pBM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fnd-cf-FwB">
+                                <rect key="frame" x="141" y="434" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <segue destination="hJX-sf-AWF" kind="modal" id="ixe-tR-s2A"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome and Sign Up!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqY-5G-fgq">
+                                <rect key="frame" x="22" y="28" width="275" height="34"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your@mail.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LOq-Uu-f6B">
+                                <rect key="frame" x="0.0" y="100" width="320" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LOq-Uu-f6B" secondAttribute="height" multiplier="32:3" id="2Ad-Uy-WM7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                                <connections>
+                                    <outlet property="delegate" destination="THw-DC-LdO" id="XiD-8P-35i"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="vqY-5G-fgq" firstAttribute="top" secondItem="PHb-lL-a1i" secondAttribute="bottom" constant="8" id="C65-v0-eKd"/>
+                            <constraint firstItem="LOq-Uu-f6B" firstAttribute="centerX" secondItem="tuh-ok-qi5" secondAttribute="centerX" id="FjR-vi-xwD"/>
+                            <constraint firstItem="vqY-5G-fgq" firstAttribute="centerX" secondItem="tuh-ok-qi5" secondAttribute="centerX" id="Y5b-eh-SOg"/>
+                            <constraint firstAttribute="trailing" secondItem="LOq-Uu-f6B" secondAttribute="trailing" id="k4m-2q-chF"/>
+                            <constraint firstItem="LOq-Uu-f6B" firstAttribute="top" secondItem="vqY-5G-fgq" secondAttribute="bottom" constant="38" id="nw7-Y7-bgk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtEmailField" destination="LOq-Uu-f6B" id="8UD-Px-n01"/>
+                        <outlet property="txtPassword" destination="Fam-YC-zUZ" id="z5a-so-5ON"/>
+                        <outlet property="view" destination="tuh-ok-qi5" id="Trl-GN-hqO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B2F-Ns-DSK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="2vb-eB-1xs">
+                    <connections>
+                        <action selector="tgrDismiss:" destination="THw-DC-LdO" id="Zh8-ba-g4S"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-168" y="36"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="ZIg-nJ-j1R">
+            <objects>
+                <viewController id="hJX-sf-AWF" customClass="LoginViewController" customModule="cvicenie3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jj9-pg-tct"/>
+                        <viewControllerLayoutGuide type="bottom" id="rag-IW-xgz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0uN-i0-88g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwh-xD-AgK">
+                                <rect key="frame" x="136" y="446" width="48" height="30"/>
+                                <state key="normal" title="Signup"/>
+                                <connections>
+                                    <segue destination="DSA-UA-DzU" kind="unwind" unwindAction="unwind:" id="aKw-4d-Ki5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="00Z-fa-jNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="DSA-UA-DzU" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="237" y="36"/>
+        </scene>
+    </scenes>
+</document>
