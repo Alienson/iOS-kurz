@@ -8,10 +8,15 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController{
 
+    @IBOutlet weak var lblEmail: UILabel!
+    var receivedString: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        lblEmail.text = receivedString
 
         // Do any additional setup after loading the view.
     }

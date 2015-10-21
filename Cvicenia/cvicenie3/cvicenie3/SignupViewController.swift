@@ -13,6 +13,9 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var txtEmailField: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
+    private var email: String = ""
+    private var password: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -24,12 +27,30 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func btnSignup(sender: UIButton) {
-        let email = txtEmailField.text
-        let password = txtPassword.text
-        print("\(email) : \(password)")
+        if validateEmail(txtEmailField.text!) {
+            self.email = txtEmailField.text!
+            self.password = txtPassword.text!
+            print("Your data: \(email) : \(password)")
+        }
+        else{
+            let alertController = UIAlertController(title: "Email validator", message: "your email address is incorrect!", preferredStyle: .Alert)
+            
+            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction!) in
+                print("you have pressed OK button");
+            }
+            alertController.addAction(OKAction)
+            
+            self.presentViewController(alertController, animated: true, completion:nil)
+        }
+    }
+    
+    @IBAction func btnLogin(sender: AnyObject) {
+        
     }
     
     @IBAction func tgrDismiss(sender: UITapGestureRecognizer) {
+        txtEmailField.resignFirstResponder()
+        txtPassword.resignFirstResponder()
         view.endEditing(true)
     }
     
@@ -37,18 +58,18 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let loginVC: LoginViewController = segue.destinationViewController as! LoginViewController
+        loginVC.receivedString = txtEmailField.text!
+    }
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         return true
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func validateEmail(candidate: String) -> Bool {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
+        return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluateWithObject(candidate)
     }
-    */
 
 }
